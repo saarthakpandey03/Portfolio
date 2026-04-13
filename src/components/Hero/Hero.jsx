@@ -7,7 +7,7 @@ import './hero.css'
 
 function downloadResume() {
   const link = document.createElement("a");
-  link.href = "/resume.pdf";   // public folder se
+  link.href = "/RESUME.pdf";   // public folder se
   link.download = "Saarthak_Pandey_Resume.pdf";
   link.click();
 }
