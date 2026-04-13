@@ -1,0 +1,118 @@
+.about { padding: 100px 0 }
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+.about__card { padding: 40px }
+
+.about__text {
+  font-size: 0.95rem;
+  color: var(--txt2);
+  line-height: 1.80;
+  margin-bottom: 14px;
+}
+.about__text:last-of-type { margin-bottom: 0 }
+.about__text strong { color: var(--txt); font-weight: 500 }
+
+/* Stats row */
+.about__stats {
+  display: flex;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bdr);
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 16px;
+  border-right: 1px solid var(--bdr);
+}
+.stat-item:first-child { padding-left: 0 }
+.stat-item:last-child  { border-right: none; padding-right: 0 }
+
+.stat-item__num {
+  font-weight: 800;
+  font-size: 1.9rem;
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-item__label {
+  font-size: 0.72rem;
+  color: var(--txt2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Right column */
+.about__right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Education card */
+.about__edu {
+  padding: 26px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.about__edu-accent {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--a), var(--a2));
+  border-radius: 0 2px 2px 0;
+}
+.about__edu-degree {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: var(--txt);
+}
+.about__edu-school {
+  color: var(--txt2);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+.about__edu-year {
+  font-size: 0.73rem;
+  color: var(--a);
+  letter-spacing: 0.05em;
+}
+
+/* Links card */
+.about__links { padding: 26px 32px }
+.about__links-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--txt);
+  margin-bottom: 14px;
+}
+.about__links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+@media (max-width: 960px) {
+  .about__grid { grid-template-columns: 1fr }
+}
+@media (max-width: 600px) {
+  .about__links-grid { grid-template-columns: 1fr 1fr }
+  .about__stats { flex-direction: column }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--bdr);
+    padding: 0 0 16px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  .stat-item:last-child { border-bottom: none; margin-bottom: 0 }
+}

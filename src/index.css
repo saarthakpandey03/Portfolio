@@ -1,0 +1,18 @@
+/* Tailwind base utilities — used alongside globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shared layout helper: uniform section padding */
+.section-pad { padding: 100px 0 }
+
+/* Max-width wrapper */
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 960px) {
+  .wrap { padding: 0 24px }
+}

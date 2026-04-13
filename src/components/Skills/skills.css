@@ -1,0 +1,109 @@
+.skills { padding: 100px 0 }
+
+.skills__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.skills__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 22px 28px;
+}
+
+.skills__row-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.skills__row-icon { font-size: 1.2rem; line-height: 1 }
+.skills__row-name {
+  font-size: 0.65rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--txt2);
+  margin-top: 2px;
+}
+
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Split: bars + focus */
+.skills__split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.skills__bars-card { padding: 32px 36px }
+.skills__bars-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--txt);
+  margin-bottom: 22px;
+}
+
+/* Individual bar */
+.skill-bar { margin-bottom: 18px }
+.skill-bar:last-child { margin-bottom: 0 }
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.skill-bar__name { font-size: 0.84rem; font-weight: 500; color: var(--txt) }
+.skill-bar__pct  { font-size: 0.72rem; min-width: 32px; text-align: right; transition: color 0.3s }
+.skill-bar__track {
+  height: 5px;
+  background: var(--bg3);
+  border-radius: 50px;
+  overflow: hidden;
+}
+.skill-bar__fill { height: 100%; border-radius: 50px }
+
+/* Right panel */
+.skills__right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills__focus-card { padding: 28px }
+.skills__focus-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--a2);
+  margin-bottom: 16px;
+}
+.skills__focus-list  { display: flex; flex-direction: column; gap: 8px }
+.skills__focus-icon  { font-size: 1.1rem; flex-shrink: 0 }
+.skills__focus-title { font-weight: 500; font-size: 0.84rem; color: var(--txt) }
+.skills__focus-sub   { font-size: 0.74rem; color: var(--txt2); margin-top: 1px }
+
+.skills__learn-card {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, rgba(79,158,255,.08), rgba(168,85,247,.08));
+  border-color: var(--bdr-g);
+}
+.skills__learn-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--txt);
+  margin-bottom: 10px;
+}
+.skills__learn-badges { display: flex; flex-wrap: wrap; gap: 7px }
+
+@media (max-width: 960px) {
+  .skills__split { grid-template-columns: 1fr }
+  .skills__row   { grid-template-columns: 1fr; gap: 12px }
+}

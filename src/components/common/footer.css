@@ -1,0 +1,30 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--bdr);
+  padding: 40px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__copy { font-size: 0.80rem; color: var(--txt3) }
+.footer__brand { font-weight: 800; font-size: 0.84rem }
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__link {
+  color: var(--txt3);
+  text-decoration: none;
+  font-size: 0.78rem;
+  transition: color 0.2s;
+}
+.footer__link:hover { color: var(--a) }
