@@ -6,8 +6,9 @@
 
 export const TYPEWRITER_WORDS = [
   'Full Stack Developer',
-  'React Enthusiast',
-  'Backend Engineer',
+  'Generative AI Developer',
+  'React & Express.js Developer',
+  'RAG Application Builder',
   'Problem Solver',
 ]
 
@@ -35,14 +36,14 @@ export const SKILL_CATEGORIES = [
     ],
   },
   {
-    icon: '⚙️',
-    label: 'Backend',
-    badges: [
-      { name: 'Node.js', lv: 'Intermediate',     c: '#68a063', g: 'rgba(104,160,99,.10)',  s: 'rgba(104,160,99,.22)' },
-      { name: 'Express', lv: 'Intermediate',     c: '#888',    g: 'rgba(136,136,136,.10)', s: 'rgba(136,136,136,.22)', dot: '#888' },
-      { name: 'Django',  lv: 'Intermediate', c: '#44b78b', g: 'rgba(68,183,139,.10)',  s: 'rgba(68,183,139,.22)', dot: '#44b78b' },
-    ],
-  },
+  icon: '⚙️',
+  label: 'Backend',
+  badges: [
+    { name: 'Node.js',     lv: 'Intermediate', c: '#68a063', g: 'rgba(104,160,99,.10)', s: 'rgba(104,160,99,.22)' },
+    { name: 'Express.js',  lv: 'Intermediate', c: '#888',    g: 'rgba(136,136,136,.10)', s: 'rgba(136,136,136,.22)' },
+    { name: 'REST APIs',   lv: 'Intermediate', c: '#4f9eff', g: 'rgba(79,158,255,.10)', s: 'rgba(79,158,255,.22)' },
+  ],
+},
   {
     icon: '🗄️',
     label: 'Database',
@@ -52,98 +53,192 @@ export const SKILL_CATEGORIES = [
     ],
   },
   {
-    icon: '🛠️',
-    label: 'Tools',
-    badges: [
-      { name: 'Git',        c: '#f05032', g: 'rgba(240,80,50,.10)',   s: 'rgba(240,80,50,.22)' },
-      { name: 'GitHub',     c: '#6e40c9', g: 'rgba(110,64,201,.10)',  s: 'rgba(110,64,201,.22)', dot: '#6e40c9' },
-      { name: 'Postman',    c: '#ff6c37', g: 'rgba(255,108,55,.10)',  s: 'rgba(255,108,55,.22)' },
-      { name: 'REST APIs',  c: '#4f9eff', g: 'rgba(79,158,255,.10)',  s: 'rgba(79,158,255,.22)' },
-      { name: 'JWT Auth',   c: '#a855f7', g: 'rgba(168,85,247,.10)',  s: 'rgba(168,85,247,.22)' },
-      { name: 'WebSockets', c: '#22d3ee', g: 'rgba(34,211,238,.10)',  s: 'rgba(34,211,238,.22)' },
-      { name: 'UI/UX',      c: '#ff3d78', g: 'rgba(255,61,120,.10)',  s: 'rgba(255,61,120,.22)' },
-    ],
-  },
+  icon: '🤖',
+  label: 'GenAI',
+  badges: [
+    { name: 'LangChain',          lv: 'Intermediate', c: '#10b981', g: 'rgba(16,185,129,.10)', s: 'rgba(16,185,129,.22)' },
+    { name: 'RAG',                lv: 'Intermediate', c: '#6366f1', g: 'rgba(99,102,241,.10)', s: 'rgba(99,102,241,.22)' },
+    { name: 'Ollama',             lv: 'Intermediate', c: '#f97316', g: 'rgba(249,115,22,.10)', s: 'rgba(249,115,22,.22)' },
+    { name: 'Prompt Engineering', lv: 'Intermediate', c: '#ec4899', g: 'rgba(236,72,153,.10)', s: 'rgba(236,72,153,.22)' },
+  ],
+},
+{
+  icon: '🛠️',
+  label: 'Tools',
+  badges: [
+    { name: 'Git',       c: '#f05032', g: 'rgba(240,80,50,.10)',  s: 'rgba(240,80,50,.22)' },
+    { name: 'GitHub',    c: '#6e40c9', g: 'rgba(110,64,201,.10)', s: 'rgba(110,64,201,.22)' },
+    { name: 'Postman',   c: '#ff6c37', g: 'rgba(255,108,55,.10)', s: 'rgba(255,108,55,.22)' },
+    { name: 'JWT Auth',  c: '#a855f7', g: 'rgba(168,85,247,.10)', s: 'rgba(168,85,247,.22)' },
+    { name: 'VS Code',   c: '#007acc', g: 'rgba(0,122,204,.10)',  s: 'rgba(0,122,204,.22)' },
+  ],
+},
 ]
 
 export const SKILL_BARS = [
-  { name: 'JavaScript / React', pct: 78, bg: 'linear-gradient(90deg,#f7df1e,#61dafb)' },
-  { name: 'Node.js / Express',  pct: 72, bg: 'linear-gradient(90deg,#68a063,#4f9eff)' },
-  { name: 'MongoDB / MySQL',    pct: 70, bg: 'linear-gradient(90deg,#4db33d,#4479a1)' },
-  { name: 'Python / Django',    pct: 72, bg: 'linear-gradient(90deg,#3776ab,#44b78b)' },
-  { name: 'C++ / DSA',          pct: 85, bg: 'linear-gradient(90deg,#00599c,#a855f7)' },
-  { name: 'UI/UX Design',       pct: 70, bg: 'linear-gradient(90deg,#ff3d78,#a855f7)' },
+  { name: 'JavaScript / React',      pct: 80, bg: 'linear-gradient(90deg,#f7df1e,#61dafb)' },
+  { name: 'Node.js / Express.js',    pct: 72, bg: 'linear-gradient(90deg,#68a063,#4f9eff)' },
+  { name: 'MongoDB / MySQL',         pct: 70, bg: 'linear-gradient(90deg,#4db33d,#4479a1)' },
+  { name: 'Python / GenAI',          pct: 75, bg: 'linear-gradient(90deg,#3776ab,#10b981)' },
+  { name: 'LangChain / RAG',         pct: 72, bg: 'linear-gradient(90deg,#6366f1,#ec4899)' },
+  { name: 'C++ / DSA',              pct: 85, bg: 'linear-gradient(90deg,#00599c,#a855f7)' },
 ]
 
 export const LEARNING_BADGES = [
-  { name: 'TypeScript', c: '#ff3d78', g: 'rgba(255,61,120,.10)', s: 'rgba(255,61,120,.22)' },
-  { name: 'Docker',     c: '#4f9eff', g: 'rgba(79,158,255,.10)', s: 'rgba(79,158,255,.22)' },
-  { name: 'AWS',        c: '#a855f7', g: 'rgba(168,85,247,.10)', s: 'rgba(168,85,247,.22)' },
+  { name: 'TypeScript', c: '#3178c6', g: 'rgba(49,120,198,.10)', s: 'rgba(49,120,198,.22)' },
+  { name: 'Docker',     c: '#2496ed', g: 'rgba(36,150,237,.10)', s: 'rgba(36,150,237,.22)' },
+  { name: 'FastAPI',    c: '#009688', g: 'rgba(0,150,136,.10)',  s: 'rgba(0,150,136,.22)' },
 ]
 
 export const FOCUS_AREAS = [
-  { icon: '🌐', title: 'Full Stack Web Dev',        sub: 'React + Node + MongoDB' },
-  { icon: '⚡', title: 'Real-Time Systems',          sub: 'WebSockets + Django Channels' },
-  { icon: '🏆', title: 'Competitive Programming',   sub: 'DSA · 400+ LeetCode' },
+  { icon: '🚀', title: 'Full Stack Web Development', sub: 'React · Express.js · MongoDB' },
+
+  { icon: '🧠', title: 'AI Application Development', sub: 'LangChain · RAG · LLMs' },
+
+  { icon: '🏆', title: 'Data Structures & Algorithms', sub: '400+ LeetCode Problems Solved' },
 ]
 
 /* ── Projects ─────────────────────────────────────────────────── */
+
 export const PROJECTS = [
   {
-    id: 'chat',
-    cat: '🔴 Real-Time Application',
+    id: 'documind',
+    cat: '🤖 Generative AI',
     num: '01',
-    numBg: 'linear-gradient(135deg,var(--a),var(--a2))',
-    title: 'Real-Time Chat App',
-    desc: 'High-performance messaging platform using Django Channels + WebSockets.',
-    pills: [['Django','pp1'],['WebSockets','pp2'],['Python','pp1'],['Redis','pp3'],['Channels','pp2']],
+    numBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+    title: 'DocuMind AI',
+    desc: 'RAG-powered document assistant that answers questions from uploaded PDF documents using local LLMs.',
+    pills: [
+      ['LangChain','pp1'],
+      ['RAG','pp2'],
+      ['Ollama','pp3'],
+      ['Python','pp1'],
+      ['LLM','pp2']
+    ],
     feats: [
-      '500+ concurrent users supported',
-      'Real-time message sync via WebSocket',
-      'Live user presence & status tracking',
-      'Persistent timestamped message history',
+      'PDF ingestion and intelligent document parsing',
+      'Semantic search using vector embeddings',
+      'Context-aware question answering pipeline',
+      'Local LLM inference without external APIs',
+    ],
+    btnBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+
+    github: "YOUR_DOCUMIND_GITHUB_LINK",
+    live: "",
+
+    vg1: 'rgba(16,185,129,.12)',
+    vg2: 'rgba(99,102,241,.08)',
+    chip1: '📄 PDF Question Answering',
+    chip2: '🧠 RAG Pipeline',
+    termTitle: 'documind_rag.py',
+    reversed: false,
+  },
+
+{
+  id: 'videomind',
+  cat: '🎥 Generative AI',
+  num: '02',
+  numBg: 'linear-gradient(135deg,#f97316,#ec4899)',
+  title: 'VideoMind AI',
+  desc: 'AI-powered video assistant that analyzes YouTube videos, generates summaries, and answers questions using transcript-based RAG.',
+
+  pills: [
+    ['LangChain','pp1'],
+    ['RAG','pp2'],
+    ['Ollama','pp3'],
+    ['Python','pp1'],
+    ['FAISS','pp2']
+  ],
+
+  feats: [
+    'Extracts and processes YouTube video transcripts',
+    'Semantic search over video content using embeddings',
+    'Context-aware video question answering',
+    'AI-generated summaries and key insights',
+  ],
+
+  btnBg: 'linear-gradient(135deg,#f97316,#ec4899)',
+
+  github: "YOUR_VIDEOMIND_GITHUB_LINK",
+  live: "",
+
+  vg1: 'rgba(249,115,22,.12)',
+  vg2: 'rgba(236,72,153,.08)',
+
+  chip1: '🎥 Video Analysis',
+  chip2: '🧠 Transcript RAG',
+
+  termTitle: 'videomind_rag.py',
+  reversed: true,
+},
+
+  {
+    id: 'tripgo',
+    cat: '🟢 Full Stack Application',
+    num: '03',
+    numBg: 'linear-gradient(135deg,var(--a),var(--a2))',
+    title: 'TripGo',
+    desc: 'AI-powered travel planning platform for creating personalized trips and itineraries.',
+    pills: [
+      ['React','pp1'],
+      ['Express.js','pp2'],
+      ['MongoDB','pp3'],
+      ['REST API','pp1'],
+      ['AI','pp2']
+    ],
+    feats: [
+      'AI-powered travel recommendations',
+      'Trip itinerary planning and management',
+      'REST APIs for seamless data handling',
+      'Responsive and modern user interface',
     ],
     btnBg: 'linear-gradient(135deg,var(--a),var(--a2))',
 
-    // ✅ ADD THESE
-    github: "https://github.com/saarthakpandey03/Real-Time-Chat",
+    github: "https://github.com/saarthakpandey03/Trip-Go",
     live: "",
 
     vg1: 'rgba(79,158,255,.12)',
     vg2: 'rgba(168,85,247,.08)',
-    chip1: '⚡ 500+ Concurrent Users',
-    chip2: '🟢 WebSocket Live',
-    termTitle: 'chat_server.py — Django Channels',
+    chip1: '✈️ Smart Travel Planning',
+    chip2: '🤖 AI Recommendations',
+    termTitle: 'tripgo-server.js',
     reversed: false,
   },
 
   {
     id: 'futureearth',
     cat: '🟣 EdTech Platform',
-    num: '02',
+    num: '04',
     numBg: 'linear-gradient(135deg,var(--a2),var(--a3))',
     title: 'Future Earth',
-    desc: 'Gamified e-learning platform with XP systems and rewards.',
-    pills: [['React','pp1'],['Node.js','pp2'],['MongoDB','pp3'],['Express','pp1'],['JWT','pp2']],
+    desc: 'Gamified learning platform developed during Smart India Hackathon.',
+    pills: [
+      ['React','pp1'],
+      ['Node.js','pp2'],
+      ['MongoDB','pp3'],
+      ['Express','pp1'],
+      ['JWT','pp2']
+    ],
     feats: [
       'JWT-based secure authentication',
       'Interactive quiz engine with XP scoring',
-      'Level-up rewards & badge system',
-      'Progress tracking & leaderboard',
+      'Level-up rewards and badge system',
+      'Progress tracking and leaderboard',
     ],
     btnBg: 'linear-gradient(135deg,var(--a2),var(--a3))',
 
     github: "https://github.com/saarthakpandey03/Game_Zone/tree/main/smooth-cart-shop-main",
-    live: " https://saarthakpandey03.github.io/Game_Zone/",
+    live: "https://saarthakpandey03.github.io/Game_Zone/",
 
     vg1: 'rgba(168,85,247,.12)',
     vg2: 'rgba(255,61,120,.08)',
     chip1: '🎮 Gamified Learning',
-    chip2: '🔐 JWT Auth',
-    termTitle: 'App.jsx — Future Earth Platform',
+    chip2: '🏆 SIH Team Project',
+    termTitle: 'FutureEarth.jsx',
     reversed: true,
   },
 ]
+
 
 /* ── Achievements ─────────────────────────────────────────────── */
 export const ACHIEVEMENTS = [

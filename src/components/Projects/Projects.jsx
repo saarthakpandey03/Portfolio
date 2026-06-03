@@ -7,33 +7,101 @@ import './projects.css'
    Kept here so ProjectCard stays data-agnostic.
 ──────────────────────────────────────────────────────────────── */
 const CODE_SNIPPETS = {
-  chat: (
-    <>
-      <span className="tc"># Real-Time Chat Server</span><br/>
-      <span className="tg">class</span><span className="ta"> ChatConsumer</span>
-      <span className="tc">(AsyncWebsocketConsumer):</span><br/><br/>
-      &nbsp;&nbsp;<span className="tg">async def</span>
-      <span className="ta"> connect</span><span className="tc">(self):</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;self.room = <span className="ty">"global_room"</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="tg">await</span> self.channel_layer<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.group_add<span className="tc">(self.room,</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="tc">self.channel_name)</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="tg">await</span> self.accept()<br/><br/>
-      &nbsp;&nbsp;<span className="tg">async def</span>
-      <span className="ta"> receive</span><span className="tc">(self, text_data):</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;data <span className="tc">=</span> json.loads<span className="tc">(text_data)</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="tg">await</span> self.channel_layer<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.group_send<span className="tc">({'{'}</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">"type"</span>
-      <span className="tc">: </span><span className="ty">"chat_message"</span>
-      <span className="tc">,</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">"message"</span>
-      <span className="tc">: data[</span><span className="ty">"message"</span>
-      <span className="tc">]</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span className="tc">{'}'}</span>
-      <span className="tc">)</span>
-    </>
-  ),
+documind: (
+  <>
+    <span className="tc"># DocuMind AI - RAG Pipeline</span><br/>
+
+    <span className="tg">from</span>
+    <span className="ta"> langchain_community.document_loaders</span>
+    <span className="tg"> import</span>
+    <span className="ty"> PyPDFLoader</span><br/>
+
+    <span className="tg">from</span>
+    <span className="ta"> langchain.text_splitter</span>
+    <span className="tg"> import</span>
+    <span className="ty"> RecursiveCharacterTextSplitter</span><br/>
+
+    <span className="tg">from</span>
+    <span className="ta"> langchain_community.vectorstores</span>
+    <span className="tg"> import</span>
+    <span className="ty"> FAISS</span><br/><br/>
+
+    <span className="tg">loader</span>
+    <span className="tc"> = </span>
+    <span className="ta">PyPDFLoader</span>
+    <span className="tc">(</span>
+    <span className="ty">"research_paper.pdf"</span>
+    <span className="tc">)</span><br/>
+
+    <span className="tg">documents</span>
+    <span className="tc"> = loader.load()</span><br/><br/>
+
+    <span className="tg">splitter</span>
+    <span className="tc"> = RecursiveCharacterTextSplitter(</span><br/>
+    &nbsp;&nbsp;<span className="ty">chunk_size=1000</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;<span className="ty">chunk_overlap=200</span><br/>
+    <span className="tc">)</span><br/><br/>
+
+    <span className="tg">chunks</span>
+    <span className="tc"> = []</span><br/>
+
+    <span className="tr">for</span>
+    <span className="tc"> doc </span>
+    <span className="tr">in</span>
+    <span className="tc"> documents:</span><br/>
+    &nbsp;&nbsp;<span className="tg">chunks</span>
+    <span className="tc"> += splitter.split_documents([doc])</span><br/><br/>
+
+  </>
+),
+videomind: (
+  <>
+    <span className="tc"># VideoMind AI - Video Q&A System</span><br/>
+
+    <span className="tg">from</span>
+    <span className="ta"> youtube_transcript_api</span>
+    <span className="tg"> import</span>
+    <span className="ty"> YouTubeTranscriptApi</span><br/>
+
+    <span className="tg">from</span>
+    <span className="ta"> langchain.text_splitter</span>
+    <span className="tg"> import</span>
+    <span className="ty"> RecursiveCharacterTextSplitter</span><br/><br/>
+
+    <span className="tg">video_id</span>
+    <span className="tc"> = </span>
+    <span className="ty">"youtube_video_id"</span><br/>
+
+    <span className="tg">transcript</span>
+    <span className="tc"> = YouTubeTranscriptApi.get_transcript(</span>
+    <span className="tg">video_id</span>
+    <span className="tc">)</span><br/><br/>
+
+    <span className="tg">full_text</span>
+    <span className="tc"> = </span>
+    <span className="ty">""</span><br/>
+
+    <span className="tr">for</span>
+    <span className="tc"> chunk </span>
+    <span className="tr">in</span>
+    <span className="tc"> transcript:</span><br/>
+    &nbsp;&nbsp;<span className="tg">full_text</span>
+    <span className="tc"> += chunk["text"] + </span>
+    <span className="ty">" "</span><br/><br/>
+
+    <span className="tg">splitter</span>
+    <span className="tc"> = RecursiveCharacterTextSplitter(</span><br/>
+    &nbsp;&nbsp;<span className="ty">chunk_size=1000</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;<span className="ty">chunk_overlap=200</span><br/>
+    <span className="tc">)</span><br/><br/>
+
+    <span className="tg">docs</span>
+    <span className="tc"> = splitter.create_documents([full_text])</span><br/>
+
+
+  </>
+),
+
   futureearth: (
     <>
       <span className="tc">// Gamified Learning Engine 🎮</span><br/>
