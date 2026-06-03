@@ -102,6 +102,45 @@ videomind: (
   </>
 ),
 
+tripgo: (
+  <>
+    <span className="tc">// TripGo - AI Travel Planner ✈️</span><br/>
+
+    <span className="tg">const</span>
+    <span className="ta"> createTrip</span>
+    <span className="tc"> = async (userPreferences) =&gt; {'{'}</span><br/>
+
+    &nbsp;&nbsp;<span className="tg">const</span>
+    <span className="tc"> destination = </span>
+    <span className="ta">await</span>
+    <span className="tc"> getDestination(userPreferences)</span><br/>
+
+    &nbsp;&nbsp;<span className="tg">const</span>
+    <span className="tc"> itinerary = </span>
+    <span className="ta">await</span>
+    <span className="tc"> generateAIItinerary({'{'}</span><br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">destination</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">budget</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">days</span><br/>
+
+    &nbsp;&nbsp;<span className="tc">{'}'})</span><br/><br/>
+
+    &nbsp;&nbsp;<span className="tg">const</span>
+    <span className="tc"> trip = </span>
+    <span className="ta">await</span>
+    <span className="tc"> Trip.create({'{'}</span><br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">userId</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">destination</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span className="ty">itinerary</span><br/>
+
+    &nbsp;&nbsp;<span className="tc">{'}'})</span><br/><br/>
+
+    &nbsp;&nbsp;<span className="tg">return</span>
+  </>
+),
+
   futureearth: (
     <>
       <span className="tc">// Gamified Learning Engine 🎮</span><br/>
