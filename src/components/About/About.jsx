@@ -74,7 +74,7 @@ export default function About() {
 
             <div className="about__stats">
               <StatItem target={400} suffix="+" label="LeetCode Solved" />
-              <StatItem target={2}   suffix="+" label="Full Projects" />
+              <StatItem target={5}   suffix="+" label="Full Projects" />
               <StatItem isStatic staticVal="2027" label="Graduation" />
             </div>
           </div>

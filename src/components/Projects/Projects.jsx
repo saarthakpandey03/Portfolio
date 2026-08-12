@@ -88,24 +88,20 @@ documind: (
   <>
     <span className="tc"># DocuMind AI - RAG Pipeline</span><br/>
 
-
     <span className="tg">from</span>
     <span className="ta"> langchain_community.document_loaders</span>
     <span className="tg"> import</span>
     <span className="ty"> PyPDFLoader</span><br/>
-
 
     <span className="tg">from</span>
     <span className="ta"> langchain.text_splitter</span>
     <span className="tg"> import</span>
     <span className="ty"> RecursiveCharacterTextSplitter</span><br/>
 
-
     <span className="tg">from</span>
     <span className="ta"> langchain_community.vectorstores</span>
     <span className="tg"> import</span>
     <span className="ty"> FAISS</span><br/><br/>
-
 
     <span className="tg">loader</span>
     <span className="tc"> = </span>
@@ -114,30 +110,26 @@ documind: (
     <span className="ty">"research_paper.pdf"</span>
     <span className="tc">)</span><br/>
 
-
     <span className="tg">documents</span>
     <span className="tc"> = loader.load()</span><br/><br/>
 
-
     <span className="tg">splitter</span>
     <span className="tc"> = RecursiveCharacterTextSplitter(</span><br/>
-    &nbsp;&nbsp;<span className="ty">chunk_size=1000</span><span className="tc">,</span><br/>
+    &nbsp;&nbsp;<span className="ty">chunk_size=1000</span>
+    <span className="tc">,</span><br/>
     &nbsp;&nbsp;<span className="ty">chunk_overlap=200</span><br/>
     <span className="tc">)</span><br/><br/>
 
-
     <span className="tg">chunks</span>
     <span className="tc"> = []</span><br/>
-
 
     <span className="tr">for</span>
     <span className="tc"> doc </span>
     <span className="tr">in</span>
     <span className="tc"> documents:</span><br/>
+
     &nbsp;&nbsp;<span className="tg">chunks</span>
     <span className="tc"> += splitter.split_documents([doc])</span><br/><br/>
-
-
   </>
 ),
 

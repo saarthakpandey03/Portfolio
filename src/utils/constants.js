@@ -39,8 +39,7 @@ export const SKILL_CATEGORIES = [
   icon: '⚙️',
   label: 'Backend',
   badges: [
-    { name: 'Node.js',     lv: 'Intermediate', c: '#68a063', g: 'rgba(104,160,99,.10)', s: 'rgba(104,160,99,.22)' },
-    { name: 'Express.js',  lv: 'Intermediate', c: '#888',    g: 'rgba(136,136,136,.10)', s: 'rgba(136,136,136,.22)' },
+    { name: 'FASTAPI',     lv: 'Intermediate', c: '#68a063', g: 'rgba(104,160,99,.10)', s: 'rgba(104,160,99,.22)' },
     { name: 'REST APIs',   lv: 'Intermediate', c: '#4f9eff', g: 'rgba(79,158,255,.10)', s: 'rgba(79,158,255,.22)' },
   ],
 },
@@ -50,6 +49,8 @@ export const SKILL_CATEGORIES = [
     badges: [
       { name: 'MongoDB', lv: 'Intermediate',     c: '#4db33d', g: 'rgba(77,179,61,.10)',  s: 'rgba(77,179,61,.22)' },
       { name: 'MySQL',   lv: 'Intermediate', c: '#4479a1', g: 'rgba(68,121,161,.10)', s: 'rgba(68,121,161,.22)' },
+      { name: 'Vector DB',   lv: 'Intermediate', c: '#4479a1', g: 'rgba(68,121,161,.10)', s: 'rgba(68,121,161,.22)' },
+
     ],
   },
   {
@@ -77,17 +78,18 @@ export const SKILL_CATEGORIES = [
 
 export const SKILL_BARS = [
   { name: 'JavaScript / React',      pct: 80, bg: 'linear-gradient(90deg,#f7df1e,#61dafb)' },
-  { name: 'Node.js / Express.js',    pct: 72, bg: 'linear-gradient(90deg,#68a063,#4f9eff)' },
+  { name: 'FASTAPI/RESTAPI',         pct: 72, bg: 'linear-gradient(90deg,#68a063,#4f9eff)' },
   { name: 'MongoDB / MySQL',         pct: 70, bg: 'linear-gradient(90deg,#4db33d,#4479a1)' },
   { name: 'Python / GenAI',          pct: 75, bg: 'linear-gradient(90deg,#3776ab,#10b981)' },
   { name: 'LangChain / RAG',         pct: 72, bg: 'linear-gradient(90deg,#6366f1,#ec4899)' },
-  { name: 'C++ / DSA',              pct: 85, bg: 'linear-gradient(90deg,#00599c,#a855f7)' },
+  { name: 'C++ / DSA',               pct: 85, bg: 'linear-gradient(90deg,#00599c,#a855f7)' },
+  { name: 'Docker' ,                 pct: 60, bg: 'linear-gradient(90deg,#2496ed,#326ce5)' },
 ]
 
 export const LEARNING_BADGES = [
   { name: 'TypeScript', c: '#3178c6', g: 'rgba(49,120,198,.10)', s: 'rgba(49,120,198,.22)' },
-  { name: 'Docker',     c: '#2496ed', g: 'rgba(36,150,237,.10)', s: 'rgba(36,150,237,.22)' },
-  { name: 'FastAPI',    c: '#009688', g: 'rgba(0,150,136,.10)',  s: 'rgba(0,150,136,.22)' },
+   { name: 'Agentic AI',     c: '#2496ed', g: 'rgba(36,150,237,.10)', s: 'rgba(36,150,237,.22)' },
+  
 ]
 
 export const FOCUS_AREAS = [
@@ -136,38 +138,50 @@ export const PROJECTS = [
 
 
 {
-id: 'documind',
-cat: '🤖 Generative AI',
-num: '02',
-numBg: 'linear-gradient(135deg,#10b981,#6366f1)',
-title: 'DocuMind AI',
-desc: 'RAG-powered document assistant that answers questions from uploaded PDF documents using local LLMs.',
-pills: [
-['LangChain','pp1'],
-['RAG','pp2'],
-['Ollama','pp3'],
-['Python','pp1'],
-['LLM','pp2']
-],
-feats: [
-'PDF ingestion and intelligent document parsing',
-'Semantic search using vector embeddings',
-'Context-aware question answering pipeline',
-'Local LLM inference without external APIs',
-],
-btnBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+  id: 'documind',
 
-github: "https://github.com/saarthakpandey03/DocuMind-AI",
-live: "",
+  cat: '🤖 Generative AI',
 
-vg1: 'rgba(16,185,129,.12)',
-vg2: 'rgba(99,102,241,.08)',
-chip1: '📄 PDF Question Answering',
-chip2: '🧠 RAG Pipeline',
-termTitle: 'documind_rag.py',
-reversed: false,
+  num: '02',
 
+  numBg: 'linear-gradient(135deg,#10b981,#6366f1)',
 
+  title: 'DocuMind AI',
+
+  desc: 'RAG-powered document assistant that answers questions from uploaded PDF documents using local LLMs.',
+
+  pills: [
+    ['LangChain', 'pp1'],
+    ['RAG', 'pp2'],
+    ['Ollama', 'pp3'],
+    ['Python', 'pp1'],
+    ['LLM', 'pp2']
+  ],
+
+  feats: [
+    'PDF ingestion and intelligent document parsing',
+    'Semantic search using vector embeddings',
+    'Context-aware question answering pipeline',
+    'Local LLM inference without external APIs',
+  ],
+
+  btnBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+
+  github: 'https://github.com/saarthakpandey03/DocuMind-AI',
+
+  live: '',
+
+  vg1: 'rgba(16,185,129,.12)',
+
+  vg2: 'rgba(99,102,241,.08)',
+
+  chip1: '📄 PDF Question Answering',
+
+  chip2: '🧠 RAG Pipeline',
+
+  termTitle: 'documind_rag.py',
+
+  reversed: true,
 },
 
 
@@ -243,7 +257,7 @@ reversed: false,
 export const ACHIEVEMENTS = [
   { icon: '💻', target: 400, suffix: '+', label: 'LeetCode Problems Solved',   ag: 'rgba(79,158,255,.12)' },
   { icon: '🚀', target: 500, suffix: '+', label: 'Concurrent Users Supported', ag: 'rgba(168,85,247,.12)' },
-  { icon: '⚡', target: 2,   suffix: '+', label: 'Full-Stack Projects Shipped', ag: 'rgba(255,61,120,.12)' },
+  { icon: '⚡', target: 5,   suffix: '+', label: 'Full-Stack Projects Shipped', ag: 'rgba(255,61,120,.12)' },
 ]
 
 /* ── Social links ─────────────────────────────────────────────── */
@@ -301,7 +315,7 @@ B.Tech CSE — IMS Engineering College, Ghaziabad (2023–2027)
 SKILLS
 Languages : JavaScript, C++, Python
 Frontend  : React, HTML5, CSS3, Tailwind CSS
-Backend   : Node.js, Express, Django
+Backend   : Django
 Database  : MongoDB, MySQL
 Tools     : Git, GitHub, Postman, REST APIs, JWT Auth, WebSockets
 
@@ -317,5 +331,5 @@ PROJECTS
 ACHIEVEMENTS
 • 400+ LeetCode problems solved
 • 500+ concurrent users on real-time system
-• 2+ full-stack projects shipped
+• 5+ full-stack projects shipped
 =========================================`

@@ -73,7 +73,7 @@ export default function Hero() {
 
           <p className="hero-sum hero__summary hero-sum-center">
             Full Stack Developer skilled in building scalable web applications
-            using React, Node.js, and databases. Experienced in frontend,
+            using React, FASTAPI and databases. Experienced in frontend,
             backend, and real-time systems.
           </p>
 
