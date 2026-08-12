@@ -136,42 +136,40 @@ export const PROJECTS = [
 
 
 {
-  id: 'videomind',
-  cat: '🎥 Generative AI',
-  num: '02',
-  numBg: 'linear-gradient(135deg,#f97316,#ec4899)',
-  title: 'VideoMind AI',
-  desc: 'AI-powered video assistant that analyzes YouTube videos, generates summaries, and answers questions using transcript-based RAG.',
+id: 'documind',
+cat: '🤖 Generative AI',
+num: '02',
+numBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+title: 'DocuMind AI',
+desc: 'RAG-powered document assistant that answers questions from uploaded PDF documents using local LLMs.',
+pills: [
+['LangChain','pp1'],
+['RAG','pp2'],
+['Ollama','pp3'],
+['Python','pp1'],
+['LLM','pp2']
+],
+feats: [
+'PDF ingestion and intelligent document parsing',
+'Semantic search using vector embeddings',
+'Context-aware question answering pipeline',
+'Local LLM inference without external APIs',
+],
+btnBg: 'linear-gradient(135deg,#10b981,#6366f1)',
 
-  pills: [
-    ['LangChain','pp1'],
-    ['RAG','pp2'],
-    ['Ollama','pp3'],
-    ['Python','pp1'],
-    ['FAISS','pp2']
-  ],
+github: "https://github.com/saarthakpandey03/DocuMind-AI",
+live: "",
 
-  feats: [
-    'Extracts and processes YouTube video transcripts',
-    'Semantic search over video content using embeddings',
-    'Context-aware video question answering',
-    'AI-generated summaries and key insights',
-  ],
+vg1: 'rgba(16,185,129,.12)',
+vg2: 'rgba(99,102,241,.08)',
+chip1: '📄 PDF Question Answering',
+chip2: '🧠 RAG Pipeline',
+termTitle: 'documind_rag.py',
+reversed: false,
 
-  btnBg: 'linear-gradient(135deg,#f97316,#ec4899)',
 
-  github: "YOUR_VIDEOMIND_GITHUB_LINK",
-  live: "",
-
-  vg1: 'rgba(249,115,22,.12)',
-  vg2: 'rgba(236,72,153,.08)',
-
-  chip1: '🎥 Video Analysis',
-  chip2: '🧠 Transcript RAG',
-
-  termTitle: 'videomind_rag.py',
-  reversed: true,
 },
+
 
   {
     id: 'tripgo',
