@@ -7,53 +7,83 @@ import './projects.css'
    Kept here so ProjectCard stays data-agnostic.
 ──────────────────────────────────────────────────────────────── */
 const CODE_SNIPPETS = {
-documind: (
+```jsx
+axel: (
   <>
-    <span className="tc"># DocuMind AI - RAG Pipeline</span><br/>
+    <span className="tc"># AXEL - Agentic AI Assistant</span><br/>
+
 
     <span className="tg">from</span>
-    <span className="ta"> langchain_community.document_loaders</span>
+    <span className="ta"> fastapi</span>
     <span className="tg"> import</span>
-    <span className="ty"> PyPDFLoader</span><br/>
+    <span className="ty"> FastAPI</span><br/>
 
     <span className="tg">from</span>
-    <span className="ta"> langchain.text_splitter</span>
+    <span className="ta"> langchain</span>
     <span className="tg"> import</span>
-    <span className="ty"> RecursiveCharacterTextSplitter</span><br/>
+    <span className="ty"> ...</span><br/>
 
     <span className="tg">from</span>
-    <span className="ta"> langchain_community.vectorstores</span>
+    <span className="ta"> chromadb</span>
     <span className="tg"> import</span>
-    <span className="ty"> FAISS</span><br/><br/>
+    <span className="ty"> PersistentClient</span><br/><br/>
 
-    <span className="tg">loader</span>
-    <span className="tc"> = </span>
-    <span className="ta">PyPDFLoader</span>
+
+    <span className="tg">app</span>
+    <span className="tc"> = FastAPI()</span><br/><br/>
+
+
+    <span className="tg">@app.post</span>
     <span className="tc">(</span>
-    <span className="ty">"research_paper.pdf"</span>
+    <span className="ty">"/load-pdf"</span>
     <span className="tc">)</span><br/>
+    <span className="tr">async def</span>
+    <span className="ta"> load_pdf</span>
+    <span className="tc">(file):</span><br/>
+    &nbsp;&nbsp;<span className="tg">return</span>
+    <span className="tc"> process_document(file)</span><br/><br/>
 
-    <span className="tg">documents</span>
-    <span className="tc"> = loader.load()</span><br/><br/>
 
-    <span className="tg">splitter</span>
-    <span className="tc"> = RecursiveCharacterTextSplitter(</span><br/>
-    &nbsp;&nbsp;<span className="ty">chunk_size=1000</span><span className="tc">,</span><br/>
-    &nbsp;&nbsp;<span className="ty">chunk_overlap=200</span><br/>
-    <span className="tc">)</span><br/><br/>
+    <span className="tg">@app.post</span>
+    <span className="tc">(</span>
+    <span className="ty">"/load-website"</span>
+    <span className="tc">)</span><br/>
+    <span className="tr">async def</span>
+    <span className="ta"> load_website</span>
+    <span className="tc">(request):</span><br/>
+    &nbsp;&nbsp;<span className="tg">return</span>
+    <span className="tc"> process_website(request.url)</span><br/><br/>
 
-    <span className="tg">chunks</span>
-    <span className="tc"> = []</span><br/>
 
-    <span className="tr">for</span>
-    <span className="tc"> doc </span>
-    <span className="tr">in</span>
-    <span className="tc"> documents:</span><br/>
-    &nbsp;&nbsp;<span className="tg">chunks</span>
-    <span className="tc"> += splitter.split_documents([doc])</span><br/><br/>
+    <span className="tg">@app.post</span>
+    <span className="tc">(</span>
+    <span className="ty">"/message"</span>
+    <span className="tc">)</span><br/>
+    <span className="tr">async def</span>
+    <span className="ta"> message</span>
+    <span className="tc">(request):</span><br/>
+    &nbsp;&nbsp;<span className="tg">context</span>
+    <span className="tc"> = retrieve_context(request.question)</span><br/>
+    &nbsp;&nbsp;<span className="tg">response</span>
+    <span className="tc"> = process_message(request.question, context)</span><br/>
+    &nbsp;&nbsp;<span className="tg">return</span>
+    <span className="tc"> response</span><br/><br/>
 
+
+    <span className="tr">sources</span>
+    <span className="tc"> = [</span>
+    <span className="ty">"PDF"</span>
+    <span className="tc">, </span>
+    <span className="ty">"Web"</span>
+    <span className="tc">, </span>
+    <span className="ty">"YouTube"</span>
+    <span className="tc">, </span>
+    <span className="ty">"GitHub"</span>
+    <span className="tc">]</span><br/>
   </>
 ),
+```
+
 videomind: (
   <>
     <span className="tc"># VideoMind AI - Video Q&A System</span><br/>

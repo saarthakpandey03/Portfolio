@@ -101,38 +101,39 @@ export const FOCUS_AREAS = [
 /* ── Projects ─────────────────────────────────────────────────── */
 
 export const PROJECTS = [
-  {
-    id: 'documind',
-    cat: '🤖 Generative AI',
-    num: '01',
-    numBg: 'linear-gradient(135deg,#10b981,#6366f1)',
-    title: 'DocuMind AI',
-    desc: 'RAG-powered document assistant that answers questions from uploaded PDF documents using local LLMs.',
-    pills: [
-      ['LangChain','pp1'],
-      ['RAG','pp2'],
-      ['Ollama','pp3'],
-      ['Python','pp1'],
-      ['LLM','pp2']
-    ],
-    feats: [
-      'PDF ingestion and intelligent document parsing',
-      'Semantic search using vector embeddings',
-      'Context-aware question answering pipeline',
-      'Local LLM inference without external APIs',
-    ],
-    btnBg: 'linear-gradient(135deg,#10b981,#6366f1)',
+{
+  id: 'axel',
+  cat: '🤖 Generative AI',
+  num: '01',
+  numBg: 'linear-gradient(135deg,#6366f1,#8b5cf6)',
+  title: 'AXEL AI',
+  desc: 'Agentic AI assistant that combines multi-source knowledge retrieval with intelligent reasoning to deliver context-aware answers from documents, web content, and other connected sources.',
+  pills: [
+    ['LangGraph','pp1'],
+    ['LangChain','pp2'],
+    ['RAG','pp3'],
+    ['FastAPI','pp1'],
+    ['LLM','pp2']
+  ],
+  feats: [
+    'Multi-source knowledge ingestion and intelligent retrieval',
+    'RAG pipeline for context-aware and grounded responses',
+    'Agentic workflow for reasoning, routing, and task execution',
+    'FastAPI backend with persistent conversation and workspace state',
+  ],
+  btnBg: 'linear-gradient(135deg,#6366f1,#8b5cf6)',
 
-    github: "YOUR_DOCUMIND_GITHUB_LINK",
-    live: "",
+  github: "https://github.com/saarthakpandey03/AXEL",
+  live: "",
 
-    vg1: 'rgba(16,185,129,.12)',
-    vg2: 'rgba(99,102,241,.08)',
-    chip1: '📄 PDF Question Answering',
-    chip2: '🧠 RAG Pipeline',
-    termTitle: 'documind_rag.py',
-    reversed: false,
-  },
+  vg1: 'rgba(99,102,241,.12)',
+  vg2: 'rgba(139,92,246,.08)',
+  chip1: '🧠 Agentic AI Assistant',
+  chip2: '🔎 Multi-Source RAG',
+  termTitle: 'axel_agent.py',
+  reversed: false,
+},
+
 
 {
   id: 'videomind',
